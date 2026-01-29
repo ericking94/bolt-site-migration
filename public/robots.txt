@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ericking.com/sitemap.xml
+
+# Principais páginas para SEO
+Allow: /contas
+Allow: /boost  
+Allow: /mentoria
+Allow: /play
+Allow: /pdfs
+Allow: /sobre
+Allow: /contato
+Allow: /whatsapp
+
+# Evitar indexação de páginas de checkout e pagamento
+Disallow: /checkout/
+Disallow: /pagamento

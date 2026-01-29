@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text;
+    background-image: url('https://i.imgur.com/wzLfY7D.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.85);
+    z-index: -1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title text-text-bright;
+  }
+  
+  p {
+    @apply font-body leading-relaxed;
+  }
+}
+
+@layer components {
+  .magic-btn {
+    @apply bg-primary text-white px-6 py-3 rounded-md font-title uppercase tracking-wider
+    transition-all duration-300 hover:bg-opacity-90 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] 
+    focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+  }
+  
+  .magic-btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-md font-title uppercase tracking-wider
+    transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]
+    focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+  }
+  
+  .section-title {
+    @apply font-title text-2xl md:text-3xl lg:text-4xl mb-8 text-text-bright relative
+    before:content-[''] before:absolute before:w-12 before:h-1 before:-bottom-2 before:left-0 before:bg-primary;
+  }
+  
+  .card {
+    @apply bg-background-light/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-primary border-opacity-30
+    shadow-md shadow-primary/20 hover:shadow-primary/40 transition-all duration-300;
+  }
+  
+  /* Hover effects específicos para cada tipo de painel */
+  .card:hover {
+    @apply border-primary/60 shadow-lg shadow-primary/30;
+  }
+  
+  /* Efeitos específicos para painéis de mentoria */
+  .mentoria-card:hover {
+    @apply border-secondary/60 shadow-lg shadow-secondary/30;
+  }
+  
+  /* Efeitos específicos para painéis de boost */
+  .boost-card:hover {
+    @apply border-success/60 shadow-lg shadow-success/30;
+  }
+  
+  /* Efeitos específicos para painéis de contas */
+  .contas-card:hover {
+    @apply border-secondary/60 shadow-lg shadow-secondary/30;
+  }
+  
+  /* Efeitos específicos para painéis de jogue comigo */
+  .play-card:hover {
+    @apply border-error/60 shadow-lg shadow-error/30;
+  }
+  
+  .hero-card {
+    @apply flex flex-col bg-background-light/80 backdrop-blur-sm rounded-lg overflow-hidden
+    border border-primary/30 shadow-lg shadow-primary/20 transition-all duration-300
+    hover:shadow-primary/40 hover:border-primary/50;
+  }
+  
+  .nav-link {
+    @apply font-title text-text-dim hover:text-text-bright transition-colors duration-300 
+    relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary 
+    after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full
+    hover:shadow-[0_0_15px_rgba(255,255,255,0.3)];
+  }
+  
+  .nav-link-no-hover {
+    @apply font-title text-text-dim hover:text-text-bright transition-colors duration-300 
+    relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary 
+    after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .nav-link.active, .nav-link-no-hover.active {
+    @apply text-text-bright after:w-full;
+  }
+  
+  .social-icon {
+    @apply text-text-dim hover:text-primary transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)];
+  }
+  
+  .social-icon-no-hover {
+    @apply text-text-dim hover:text-primary transition-colors duration-300;
+  }
+  
+  .animated-bg {
+    @apply relative overflow-hidden;
+  }
+  
+  .animated-bg::before {
+    @apply content-[''] absolute inset-0 bg-gradient-radial from-primary/10 to-transparent opacity-50;
+    animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px rgba(197, 157, 95, 0.7);
+  }
+
+  .slider {
+    background: linear-gradient(to right, #C59D5F 0%, #C59D5F 50%, #333 50%, #333 100%);
+  }
+
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #C59D5F;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(197, 157, 95, 0.5);
+  }
+
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #C59D5F;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(197, 157, 95, 0.5);
+  }
+
+  /* Scroll Arrow Animation */
+  .scroll-arrow {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .scroll-arrow:hover {
+    transform: translateY(2px);
+  }
+
+  /* Responsividade para mobile - evitar sobreposição */
+  @media (max-width: 768px) {
+    .logo-topo {
+      display: none !important;
+    }
+    
+    /* Ajustes para o header mobile */
+    header .container {
+      position: relative;
+    }
+    
+    /* Centralizar logo mobile */
+    header .md\:hidden {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+    
+    /* Posicionar menu toggle à direita */
+    header button[aria-label="Toggle menu"] {
+      position: relative;
+      z-index: 20;
+      margin-left: auto;
+    }
+    
+    /* Desabilitar resize em mobile */
+    .resize-both {
+      resize: none !important;
+    }
+  }
+  
+  /* Estilos para elementos redimensionáveis */
+  .resize-both {
+    resize: both;
+    overflow: auto;
+  }
+  
+  /* Melhorar a aparência do handle de resize */
+  .resize-both::-webkit-resizer {
+    background: linear-gradient(-45deg, transparent 0%, transparent 40%, rgba(197, 157, 95, 0.5) 40%, rgba(197, 157, 95, 0.5) 60%, transparent 60%);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/70 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Ericking - Contas e Boost Dota 2",
+  "short_name": "Ericking Dota 2",
+  "description": "Compra de contas Dota 2, boost MMR, elo job e coach profissional com jogador Imortal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#C59D5F",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/SmLTQ7T.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.imgur.com/SmLTQ7T.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
