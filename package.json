@@ -13,6 +13,7 @@
     "@emailjs/browser": "^4.3.3",
     "embla-carousel-react": "^8.0.0-rc22",
     "framer-motion": "^11.0.5",
+    "lovable-tagger": "^1.1.13",
     "lucide-react": "^0.344.0",
     "mercadopago": "^2.9.0",
     "react": "^18.3.1",
