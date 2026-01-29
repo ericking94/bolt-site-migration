@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Target, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedElement from '../components/AnimatedElement';
 import DualMMRSlider from '../components/DualMMRSlider';

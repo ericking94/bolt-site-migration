@@ -98,11 +98,11 @@ const ParticlesBackground: React.FC<ParticleProps> = ({
       }
     };
     
-    const connectParticles = (p: typeof particles[0], particles: typeof particles, ctx: CanvasRenderingContext2D) => {
+    const connectParticles = (p: { x: number; y: number; directionX: number; directionY: number; size: number; color: string }, particlesList: { x: number; y: number; directionX: number; directionY: number; size: number; color: string }[], ctx: CanvasRenderingContext2D) => {
       const proximityLimit = 150;
       
-      for (let j = 0; j < particles.length; j++) {
-        const p2 = particles[j];
+      for (let j = 0; j < particlesList.length; j++) {
+        const p2 = particlesList[j];
         
         // Calculate distance between particles
         const dx = p.x - p2.x;

@@ -30,6 +30,7 @@ export const createPayment = async (req: CreatePaymentRequest): Promise<CreatePa
     const preferenceData = {
       items: [
         {
+          id: idPedido,
           title: titulo,
           quantity: 1,
           unit_price: valor,

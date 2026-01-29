@@ -7,7 +7,6 @@ import AnimatedElement from '../components/AnimatedElement';
 import AnimatedBg from '../components/AnimatedBg';
 
 const AboutPage: React.FC = () => {
-  const [hoveredHero, setHoveredHero] = React.useState<number | null>(null);
   const [showScrollArrow, setShowScrollArrow] = React.useState(true);
 
   React.useEffect(() => {
@@ -27,11 +26,6 @@ const AboutPage: React.FC = () => {
     }
   };
 
-  // Converter URLs do Google Drive para formato embedável
-  const getEmbedUrl = (driveUrl: string) => {
-    const fileId = driveUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
-    return fileId ? `https://drive.google.com/file/d/${fileId}/preview` : driveUrl;
-  };
   return (
     <div className="pt-20">
       <section className="relative py-24 overflow-hidden"> 

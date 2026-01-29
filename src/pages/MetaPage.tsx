@@ -4,7 +4,6 @@ import { ChevronDown } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedElement from '../components/AnimatedElement';
 import MetaPanel from '../components/MetaPanel';
-import BuildPanel from '../components/BuildPanel';
 import { currentMeta } from '../data/metaHeroes';
 
 const MetaPage: React.FC = () => {

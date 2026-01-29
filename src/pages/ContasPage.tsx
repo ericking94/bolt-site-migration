@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, AlertTriangle, CheckCircle, ChevronDown, Plus } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedElement from '../components/AnimatedElement';
@@ -29,17 +29,6 @@ const rankImages = {
   immortal: 'https://hawk.live/images/dota-2-seasonal-ranking-medals/seasonal-rank-immortal.png',
 };
 
-// Background images for panels based on rank
-const rankBackgrounds = {
-  herald: 'https://i.imgur.com/8xKzQmE.jpeg',
-  guardian: 'https://i.imgur.com/9vKzLmP.jpeg', 
-  crusader: 'https://i.imgur.com/7HqRtNx.jpeg',
-  archon: 'https://i.imgur.com/2KvNmQr.jpeg',
-  ancient: 'https://i.imgur.com/4RzXtGk.jpeg',
-  divine: 'https://i.imgur.com/apEiuF3.jpeg',
-  immortal: 'https://i.imgur.com/HnEcsXz.jpeg',
-  dotaplus: 'https://i.imgur.com/ZSpARC4.jpeg'
-};
 
 // Function to get rank tier from rank name
 const getRankTier = (rank: string): keyof typeof rankImages => {
