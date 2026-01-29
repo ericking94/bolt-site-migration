@@ -242,40 +242,6 @@ const MedalSelector: React.FC<MedalSelectorProps> = ({ mmr, onMedalSelect, label
   );
 };
 
-const RankCircle: React.FC<{ mmr: number; label: string }> = ({ mmr, label }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const rankInfo = getRankInfo(mmr);
-  const currentImage = rankImages[rankInfo.tier as keyof typeof rankImages][rankInfo.index];
-
-  return (
-    <div className="text-center mb-6">
-      <div className="text-center mb-2">
-        <span className="text-primary font-title text-lg">{rankInfo.name}</span>
-      </div>
-      <div 
-        className="w-24 h-24 mx-auto mb-2 rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 cursor-pointer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <img 
-          src={currentImage} 
-          alt={rankInfo.name}
-          className={`w-full h-full object-cover rounded-full transition-all duration-300 ${
-            isHovered ? 'opacity-100 scale-110' : 'opacity-80 scale-100'
-          }`}
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-            if (target.parentElement) {
-              target.parentElement.innerHTML = `<span class="text-primary font-title text-sm text-center px-2">${rankInfo.name}</span>`;
-            }
-          }}
-        />
-      </div>
-      <p className="text-text-dim text-sm">{label}</p>
-    </div>
-  );
-};
 
 const DualMMRSlider: React.FC<DualMMRSliderProps> = ({ onMMRChange }) => {
   const [currentMMR, setCurrentMMR] = useState(1000);

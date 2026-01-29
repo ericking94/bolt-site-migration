@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, ChevronDown, Sword, Shield, Target, TrendingUp, Clock, Award, Users, BookOpen, Zap, ShoppingCart } from 'lucide-react';
+import { ChevronDown, Users, BookOpen, Zap, ShoppingCart } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ParticlesBackground from '../components/ParticlesBackground';
-import { playerStats } from '../assets/stats';
-import AnimatedElement from '../components/AnimatedElement';
 
 const HomePage: React.FC = () => {
   const [showScrollArrow, setShowScrollArrow] = useState(true);

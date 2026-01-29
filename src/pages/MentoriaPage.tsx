@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Trophy, Video, Users, Eye, ChevronDown } from 'lucide-react';
+import { Video, Users, Eye, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedElement from '../components/AnimatedElement';
@@ -19,102 +19,6 @@ interface MentoriaProduct {
   showBackground?: boolean;
 }
 
-const mentoriaPersonalizada: MentoriaProduct[] = [
-  {
-    id: 'sessao-individual',
-    title: 'Sessão Individual',
-    description: '1 aula personalizada com revisão completa',
-    icon: <BookOpen size={32} />,
-    aulas: 1,
-    revisoes: 1,
-    pdfs: 1,
-    showBackground: true,
-    backgroundImage: 'https://i.imgur.com/8xKzQmE.jpeg',
-    features: [
-      '1 aula de aproximadamente 1 hora via Discord',
-      '1 revisão personalizada',
-      'PDF com conceitos básicos e avançados',
-      'Análise detalhada de replays',
-      'Feedback por escrito pós-sessão'
-    ]
-  },
-  {
-    id: 'first-blood',
-    title: 'Plano First Blood',
-    description: '3 aulas com acompanhamento completo',
-    icon: <Trophy size={32} />,
-    aulas: 3,
-    revisoes: 1,
-    pdfs: 1,
-    showBackground: true,
-    backgroundImage: 'https://i.imgur.com/9vKzLmP.jpeg',
-    features: [
-      '3 aulas de aproximadamente 1 hora via Discord',
-      '1 revisão personalizada',
-      'PDF com conceitos básicos e avançados',
-      'Contato direto durante 1 mês',
-      'Análise detalhada de replays',
-      'Feedback por escrito pós-sessão'
-    ]
-  },
-  {
-    id: 'divine',
-    title: 'Plano Divine',
-    description: '5 aulas com revisões extras',
-    icon: <Trophy size={32} />,
-    aulas: 5,
-    revisoes: 2,
-    pdfs: 1,
-    showBackground: true,
-    backgroundImage: 'https://i.imgur.com/7HqRtNx.jpeg',
-    features: [
-      '5 aulas de aproximadamente 1 hora via Discord',
-      '2 revisões personalizadas',
-      'PDF com conceitos básicos e avançados',
-      'Contato direto durante 1 mês',
-      'Análise detalhada de replays',
-      'Feedback por escrito pós-sessão'
-    ]
-  },
-  {
-    id: 'rampage',
-    title: 'Plano Rampage',
-    description: '7 aulas com material extra',
-    icon: <Trophy size={32} />,
-    aulas: 7,
-    revisoes: 3,
-    pdfs: 2,
-    showBackground: true,
-    backgroundImage: 'https://i.imgur.com/2KvNmQr.jpeg',
-    features: [
-      '7 aulas de aproximadamente 1 hora via Discord',
-      '3 revisões personalizadas',
-      '2 PDFs com conceitos básicos e avançados',
-      'Contato direto durante 1 mês',
-      'Análise detalhada de replays',
-      'Feedback por escrito pós-sessão'
-    ]
-  },
-  {
-    id: 'immortal',
-    title: 'Plano Immortal',
-    description: 'Pacote completo com máximo suporte',
-    icon: <Trophy size={32} />,
-    aulas: 10,
-    revisoes: 5,
-    pdfs: 2,
-    showBackground: true,
-    backgroundImage: 'https://i.imgur.com/4RzXtGk.jpeg',
-    features: [
-      '10 aulas de aproximadamente 1 hora via Discord',
-      '5 revisões personalizadas',
-      '2 PDFs com conceitos básicos e avançados',
-      'Contato direto durante 1 mês',
-      'Análise detalhada de replays',
-      'Feedback por escrito pós-sessão'
-    ]
-  }
-];
 
 const analiseReplays: MentoriaProduct[] = [
   {

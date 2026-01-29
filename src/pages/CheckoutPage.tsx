@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, User, Mail, MessageSquare, Clock, Users, Target, CreditCard } from 'lucide-react';
-import { ChevronDown } from 'lucide-react';
+import { ArrowLeft, User, Mail, MessageSquare, CreditCard } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedElement from '../components/AnimatedElement';
 import RankSelector from '../components/RankSelector';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Twitch, Youtube, ChevronDown, MessageCircle, Phone, Instagram } from 'lucide-react';
+import { Menu, X, Twitch, Youtube, ChevronDown, Instagram } from 'lucide-react';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [

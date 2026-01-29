@@ -4,9 +4,7 @@ import { FileText, Sword, Shield, Target, Users, Heart, Zap, ChevronDown } from 
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedElement from '../components/AnimatedElement';
-import MetaPanel from '../components/MetaPanel';
 import { getProductPrice } from '../data/pricing';
-import { currentMeta } from '../data/metaHeroes';
 
 interface PDFProduct {
   id: string;
@@ -304,7 +302,7 @@ const PDFsPage: React.FC = () => {
                       <div>
                         <h3 className="font-title text-2xl text-text-bright mb-6 text-center">{category}</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                          {heroesInCategory.map((product, index) => (
+                          {heroesInCategory.map((product) => (
                             <div 
                               key={product.id}
                               className="card flex-1 flex flex-col relative overflow-hidden group hover:border-primary/60 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"

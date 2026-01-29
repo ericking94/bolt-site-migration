@@ -135,7 +135,7 @@ const GameplayPage: React.FC = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {matchHistory.slice(0, 5).map((match, index) => (
+                      {matchHistory.slice(0, 5).map((match) => (
                         <tr key={match.id} className="border-b border-primary/10 last:border-0">
                           <td className="py-3 text-text-bright">
                             {match.hero}
