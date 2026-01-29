@@ -17,6 +17,9 @@ export default defineConfig({
       }
     }
   ],
+  server: {
+    port: 8080
+  },
   base: './',
   build: {
     outDir: 'dist',
